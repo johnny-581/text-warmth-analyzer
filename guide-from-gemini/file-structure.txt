@@ -1,0 +1,42 @@
+warmth-analyzer/
+├── backend/
+│   ├── app.py                     # Flask application entry point
+│   ├── model.py                   # Model loading and prediction logic
+│   ├── data_generation.py         # Script for generating synthetic data using Gemini API
+│   ├── requirements.txt           # Python dependencies for the backend
+│   ├── .flaskenv                  # Environment variables for Flask (e.g., FLASK_APP)
+│   └── models/
+│       └── warmth_distilbert/     # Directory to store the fine-tuned TensorFlow model
+│           ├── saved_model.pb
+│           ├── variables/
+│           │   └── ...
+│           └── assets/
+│               └── ...
+│
+├── frontend/
+│   ├── public/
+│   │   ├── index.html             # Main HTML file
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── App.js                 # Main React component
+│   │   ├── index.js               # React entry point
+│   │   ├── components/
+│   │   │   └── WarmthAnalyzer.js  # Component for input box and displaying warmth
+│   │   ├── assets/
+│   │   │   └── ...                # Images, fonts, etc.
+│   │   ├── styles/
+│   │   │   └── index.css          # Tailwind CSS output or custom CSS
+│   │   └── tailwind.config.js     # Tailwind CSS configuration
+│   ├── package.json               # Node.js dependencies for the frontend
+│   ├── postcss.config.js          # PostCSS configuration for Tailwind
+│   ├── .env                       # Environment variables for React (e.g., REACT_APP_API_URL)
+│   └── README.md                  # Frontend specific README
+│
+├── notebooks/                     # Optional: For experimentation, data exploration, model training
+│   ├── data_exploration.ipynb
+│   ├── model_training.ipynb
+│   └── prompt_engineering_tests.ipynb
+│
+├── README.md                      # Overall project README
+├── .gitignore                     # Git ignore file (e.g., node_modules, __pycache__, .env)
+└── requirements-dev.txt           # Development dependencies (e.g., jupyter, black)
